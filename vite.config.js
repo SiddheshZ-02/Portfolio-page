@@ -7,5 +7,5 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [tailwindcss(),
     react()],
-    base: '/Portfolio-Page/',
+    base: '/Portfolio-page/',
 })
