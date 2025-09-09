@@ -6,6 +6,7 @@ import bootstrap from "/bootstrap.png";
 import react from "/react.png";
 import tailwind from "/tailwind.png";
 import native1 from "/native1.jpg";
+import typescript from "/typescript.png";
 
 const skillsData = [
   {
@@ -29,14 +30,14 @@ const skillsData = [
   },
   {
     id: 4,
-    image: native1,
-    title: "React Native",
+    image: typescript,
+    title: "Typescript",
     progress: 80,
   },
   {
     id: 5,
     image: react,
-    title: "REACT",
+    title: "REACT JS / REACT NATIVE",
     progress: 75,
   },
   {
@@ -102,7 +103,8 @@ const Skills = () => {
           <p className="text-gray-400 mt-2 sm:mt-4 text-sm sm:text-base">
             I have a strong foundation in front-end development and a passion
             for building clean, responsive, and user-focused web interfaces
-            using modern web technologies. <br />My current skills set includes:
+            using modern web technologies. <br />
+            My current skills set includes:
           </p>
         </header>
         <section

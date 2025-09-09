@@ -9,7 +9,15 @@ import HRMSqr from "/HRMSqr.png";
 import { useState } from "react";
 import QRCode from "react-qr-code";
 
-const ProjectCard = ({ image, title, description, link, id, onShowQR, qrValue }) => {
+const ProjectCard = ({
+  image,
+  title,
+  description,
+  link,
+  id,
+  onShowQR,
+  qrValue,
+}) => {
   return (
     <article className="relative max-w-sm bg-gray-800 rounded-xl overflow-hidden shadow-lg group transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
       <div className="absolute z-0 w-40 sm:w-60 sm:h-60 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-full blur-3xl opacity-50 -top-5 left-10 animate-pulse"></div>
@@ -30,8 +38,17 @@ const ProjectCard = ({ image, title, description, link, id, onShowQR, qrValue })
           >
             <button className="bg-white font-medium text-black py-2 px-6 rounded-full shadow-lg hover:text-white hover:bg-[#2879d5] transform transition-all duration-300 hover:scale-110 hover:shadow-xl">
               {id === 5 || id === 6 ? (
-                <span onClick={e => {e.preventDefault(); onShowQR(link);}}>Show QR Code</span>
-              ) : "Live Preview"}
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onShowQR(link);
+                  }}
+                >
+                  Show QR Code
+                </span>
+              ) : (
+                "Live Preview"
+              )}
             </button>
           </a>
         </figure>
@@ -58,9 +75,6 @@ const ProjectCard = ({ image, title, description, link, id, onShowQR, qrValue })
 //   );
 // }
 
-const buildLink =
-  "https://docs.google.com/uc?export=download&id=1IrkUw8LpP5AEJMEVJT4TSR7PLgPXoPzp";
-
 const Projects = () => {
   const [showQR, setShowQR] = useState(false);
   const [qrValue, setQRValue] = useState("");
@@ -70,50 +84,36 @@ const Projects = () => {
       id: 1,
       image: EMSimg,
       title: "Employee-Management-System",
-      description:
-        " The Admin Information App is a simple yet functional web application designed to retrieve and display admin details using a unique user ID.the app allows users to enter an ID (01 to 30) and instantly fetch corresponding admin information such as name, age, gender, and email it can be already store in jsonData. ",
-
       link: "https://siddheshz-02.github.io/Employee-Management-System-EMS/",
     },
     {
       id: 2,
       image: notepadimg,
       title: "Task & Notepad",
-      description:
-        " The Registration Form is a user input interface designed to collect essential user details for account creation. It is built with a focus on simplicity, usability, and validation to ensure accurate and secure data collection.",
-      link: " https://siddheshz-02.github.io/Task-Notepad/",
+      link: "https://siddheshz-02.github.io/Task-Notepad/",
     },
     {
       id: 3,
       image: Tesla_clone,
       title: "Cars WebPage",
-      description:
-        " The Tesla Car Page Clone with Custom Design is a static web project that replicates and reimagines the Tesla landing page using pure HTML and CSS with own design ideas.",
-      link: " https://siddheshz-02.github.io/Tesla-Car-Page----Clone/",
+      link: "https://siddheshz-02.github.io/car_webApp/",
     },
     {
       id: 4,
       image: weatherimg,
       title: "Weather App",
-      description:
-        " The Weather App is a dynamic web application that allows users to check real-time weather conditions for their current location or any selected country. It can build Reactjs (or a weather API), the app provides a clean, responsive interface with live weather data fetched from external sources.",
       link: "https://siddheshz-02.github.io/Weather-App/",
     },
     {
       id: 5,
       image: Zengym,
       title: "ZENGYM Mobile-App",
-      description:
-        " The Weather App is a dynamic web application that allows users to check real-time weather conditions for their current location or any selected country. It can build Reactjs (or a weather API), the app provides a clean, responsive interface with live weather data fetched from external sources.",
       link: "https://docs.google.com/uc?export=download&id=1DBjRAy17s04ll0rDODUh-g9fO9O5nAsR",
     },
     {
       id: 6,
       image: HRMS,
-      title: " Human Resource Management System Mobile-App",
-
-      description:
-        " The Weather App is a dynamic web application that allows users to check real-time weather conditions for their current location or any selected country. It can build Reactjs (or a weather API), the app provides a clean, responsive interface with live weather data fetched from external sources.",
+      title: "Human Resource Management System Mobile-App",
       link: "https://docs.google.com/uc?export=download&id=1IrkUw8LpP5AEJMEVJT4TSR7PLgPXoPzp",
     },
   ];
@@ -158,8 +158,17 @@ const Projects = () => {
             // description={Projects.description}
             link={Projects.link}
             id={Projects.id}
-        onShowQR={(value) => { setQRValue(value); setShowQR(true); }}
-        qrValue={Projects.id === 5 ? Zengymqr : Projects.id === 6 ? HRMSqr : Projects.link}
+            onShowQR={(value) => {
+              setQRValue(value);
+              setShowQR(true);
+            }}
+            qrValue={
+              Projects.id === 5
+                ? Zengymqr
+                : Projects.id === 6
+                ? HRMSqr
+                : Projects.link
+            }
           />
         ))}
       </section>
