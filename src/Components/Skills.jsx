@@ -5,6 +5,7 @@ import javascript from "/javascript.png";
 import bootstrap from "/bootstrap.png";
 import react from "/react.png";
 import tailwind from "/tailwind.png";
+import native1 from "/native1.jpg";
 
 const skillsData = [
   {
@@ -28,9 +29,9 @@ const skillsData = [
   },
   {
     id: 4,
-    image: bootstrap,
-    title: "BOOTSTRAP",
-    progress: 50,
+    image: native1,
+    title: "React Native",
+    progress: 80,
   },
   {
     id: 5,

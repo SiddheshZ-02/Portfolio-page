@@ -1,52 +1,47 @@
 import React from "react";
-import prof2 from '/prof2.png'
+import prof2 from "/prof2.png";
 
-
-const about = () => {
+const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen overflow-hidden flex items-center justify-center text-white px-4 sm:px-6"
+      className="min-h-[600px] sm:min-h-[700px] md:min-h-screen overflow-hidden flex items-center justify-center text-white px-4 sm:px-6 md:px-8 lg:px-12"
     >
-      <div className="man-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+      <div className="max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center">
         <figure
           data-aos="fade-right"
           data-aos-delay="500"
-          className="flex flex-wrap justify-center  gap-4  relative"
+          className="flex justify-center relative"
         >
-          <div className="h-[200px] sm:h-[300px] sm:w-[400px] lg:h-[300px] lg:w-[500px]  bg-gradient-to-l from-[#6d2897] via-[#6c95f5] to-[#bb61c5] absolute transform rotate-12 z-0 right-5 -top-2 md:top-10 rounded-full"></div>
-
+          <div className="h-[150px] w-[200px] sm:h-[200px] sm:w-[300px] md:h-[250px] md:w-[350px] lg:h-[300px] lg:w-[400px] bg-gradient-to-l from-[#6d2897] via-[#6c95f5] to-[#bb61c5] absolute transform rotate-12 z-0 right-2 sm:right-4 md:right-5 -top-4 sm:-top-2 md:top-4 lg:top-10 rounded-full"></div>
           <img
             src={prof2}
             alt="about picture 2"
-            className="relative z-10 w-36 h-44 sm:h-40 md:w-72 md:h-96 rounded-lg shadow-lg "
+            className="relative z-10 w-[120px] h-[140px] sm:w-[160px] sm:h-[180px] md:w-[200px] md:h-[240px] lg:w-[240px] lg:h-[300px] rounded-lg shadow-lg"
           />
         </figure>
-
         <article
           data-aos="fade-right"
           data-aos-delay="500"
           className="text-center lg:text-left relative"
         >
-          <div className="absolute z-0 w-40 h-40 sm:w-60 sm:h-60 bg-[#cd3cf5] rounded-full blur-3xl opacity-50 -top-5 left-10"></div>
-
+          <div className="absolute z-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 bg-[#cd3cf5] rounded-full blur-3xl opacity-50 -top-4 sm:-top-5 left-8 sm:left-10"></div>
           <header>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              {" "}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6">
               About Me
             </h1>
           </header>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-           I have knowledge about HTML, CSS, JavaScript, and React.js to build websites that look great and work smoothly on all devices, transforming complex UI/UX designs into clean, maintainable, and scalable front-end code.Continuously learning and staying up-to-date with modern web technologies, I aim to deliver impactful solutions that drive user engagement and business value.
-
-
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed">
+            Self-taught Frontend Developer skilled in building responsive and
+            user-friendly web and mobile applications using React.js and React
+            Native. Passionate about UI/UX, performance optimization, and
+            writing clean code. Proven ability to learn independently and
+            deliver impactful projects.
           </p>
-
-         
         </article>
       </div>
     </section>
   );
 };
 
-export default about;
+export default About;

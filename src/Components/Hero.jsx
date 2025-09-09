@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import prof2 from "/prof2.png";
 import github from "/github.png";
 import linkedin from "/linkedin.png";
+import TextType from "./TextType";
 
 const Hero = () => {
   return (
@@ -24,9 +25,16 @@ const Hero = () => {
               {" "}
               Siddhesh Zujam
             </h1>
-            <h2 className="text-xl sm:text-4xl md:text-2xl font-bold text-[#3e0f4a] md:text-[#c744ec]">
-              Front-End Developer
-            </h2>
+            <h1 className="text-xl sm:text-4xl md:text-2xl font-bold text-[#3e0f4a] md:text-[#c744ec]">
+              <TextType
+                text={["Front-End developer", "App Developer"]}
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={true}
+                cursorCharacter="|"
+                textColors={["#c744ec"]}
+              />
+            </h1>
           </header>
           <p className="text-xl sm:text-4xl md:text-lg text-gray-200  mb-6">
             I’m a dedicated Front-End Developer with a strong interest in
@@ -55,7 +63,7 @@ const Hero = () => {
           </div>
 
           <a href="">
-            <button className="inline-flex text-white border-2 py-2 px-6 focus:outline-none hover:bg-[#801b9c] hover:shadow-[0_0_40px_rgba(128,0,128,0.7) rounded-full text-lg">
+            <button className="inline-flex text-white border-2 py-2 px-6 focus:outline-none hover:bg-[#801b9c] hover:shadow-[0_0_40px_rgba(128,0,128,0.7) rounded-full text-sm">
               Downlod CV{" "}
             </button>
           </a>
@@ -69,7 +77,7 @@ const Hero = () => {
           <img
             src={prof2}
             alt="Hero Image"
-            className=" h-[300px] sm:h-[400px] w-[250px] sm:w[480px]  object-cover rounded-lg"
+            className="h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] object-cover rounded-lg"
           />
         </figure>
       </main>

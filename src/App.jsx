@@ -4,7 +4,6 @@ import "aos/dist/aos.css";
 import Hero from "./Components/Hero";
 import About from "./Components/About";
 import Skills from "./Components/Skills";
-import Footer from "./Components/Footer";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 
@@ -18,10 +17,9 @@ function App() {
       <main className="bg-gray-950">
         <Hero />
         <About />
-        <Skills/>
-        <Projects/>
-        <Contact/>
-        <Footer/>
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
     </>
   );
