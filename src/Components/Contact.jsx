@@ -1,12 +1,13 @@
-import  { useState } from "react";
-import Prof1 from "/Prof1.png"
-import Swal from 'sweetalert2'
+import { useState } from "react";
+import Swal from "sweetalert2";
 import Footer from "./Footer";
+import Prof2  from "/prof2.png";
+
 
 
 
 const Contact = () => {
- const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
@@ -107,7 +108,7 @@ const Contact = () => {
       });
     }
   };
-  
+
   return (
     <section
       id="contact"
@@ -123,9 +124,9 @@ const Contact = () => {
           ></div>
 
           <img
-            src={Prof1}
+            src={Prof2}
             alt="Contact illustration"
-            className="h-[250px] sm:h-[570px] md:h-[500px] w-[300px] sm:w-[480px] object-cover rounded-t-lg md:rounded-r-lg relative"
+            className="h-[200px] sm:h-[250px] md:h-[450px] lg:h-[450px] w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] object-cover rounded-lg relative z-10 mx-auto md:top-20"
           />
         </aside>
 
@@ -151,11 +152,15 @@ const Contact = () => {
                 onChange={handleInputChange}
                 placeholder="Your Name"
                 className={`w-full px-3 sm:px-4 py-2 text-white bg-gray-900 rounded-lg focus:outline-none focus:ring-2 ${
-                  errors.name ? "border-red-500 border-2" : "focus:ring-purple-500"
+                  errors.name
+                    ? "border-red-500 border-2"
+                    : "focus:ring-purple-500"
                 }`}
               />
               {errors.name && (
-                <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.name}</p>
+                <p className="text-red-500 text-xs sm:text-sm mt-1">
+                  {errors.name}
+                </p>
               )}
             </div>
             <div>
@@ -173,11 +178,15 @@ const Contact = () => {
                 onChange={handleInputChange}
                 placeholder="Your Email"
                 className={`w-full px-3 sm:px-4 py-2 text-white bg-gray-900 rounded-lg focus:outline-none focus:ring-2 ${
-                  errors.email ? "border-red-500 border-2" : "focus:ring-purple-500"
+                  errors.email
+                    ? "border-red-500 border-2"
+                    : "focus:ring-purple-500"
                 }`}
               />
               {errors.email && (
-                <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.email}</p>
+                <p className="text-red-500 text-xs sm:text-sm mt-1">
+                  {errors.email}
+                </p>
               )}
             </div>
             <div>
@@ -194,11 +203,15 @@ const Contact = () => {
                 onChange={handleInputChange}
                 placeholder="Your Message"
                 className={`w-full px-3 sm:px-4 py-2 text-white bg-gray-900 rounded-lg focus:outline-none focus:ring-2 min-h-[100px] sm:min-h-[120px] md:min-h-[150px] ${
-                  errors.message ? "border-red-500 border-2" : "focus:ring-purple-500"
+                  errors.message
+                    ? "border-red-500 border-2"
+                    : "focus:ring-purple-500"
                 }`}
               ></textarea>
               {errors.message && (
-                <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.message}</p>
+                <p className="text-red-500 text-xs sm:text-sm mt-1">
+                  {errors.message}
+                </p>
               )}
             </div>
             <button
@@ -206,12 +219,12 @@ const Contact = () => {
               className="w-full text-white border-2 border-purple-500 py-2 px-4 sm:px-6 rounded-full text-sm sm:text-base md:text-lg 
               hover:bg-purple-600 hover:shadow-[0_0_20px_rgba(128,0,128,0.5)] transition-all duration-300"
             >
-              Send Message
+              Connect Me
             </button>
           </form>
         </section>
       </article>
-    <Footer/>
+      <Footer />
     </section>
   );
 };

@@ -27,11 +27,11 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 w-full z-20 text-white "
+      className="fixed top-0 left-0 w-full z-20 text-white bg-transparent bg/opacity-90 backdrop-blur-sm  "
       data-aos="fade-up"
       data-aos-delay="300"
     >
-      <div className="container mx-auto flex items-center justify-between p-5">
+      <div className="container mx-auto flex items-center justify-between p-5 h-12">
         <button 
           onClick={() => scrollToSection("hero")}
           className="text-4xl font-bold italic text-white hover:text-purple-400 transition-colors duration-300"
@@ -58,7 +58,7 @@ export default function Navbar() {
           ))}
           <button 
             onClick={() => scrollToSection("contact")}
-            className="inline-flex text-white border-2 py-2 px-6 focus:outline-none hover:bg-purple-800 rounded-full text-lg transition-colors duration-300"
+            className="inline-flex text-white border-1 py-1 px-6 focus:outline-none hover:bg-purple-800 rounded-full text-lg transition-colors duration-300"
           >
             Contact
           </button>
@@ -81,7 +81,7 @@ export default function Navbar() {
           <button
             key={link.id}
             onClick={() => scrollToSection(link.link)}
-            className="text-lg text-white hover:text-purple-400 transition-colors duration-300"
+            className="text-md text-white hover:text-purple-400 transition-colors duration-300"
           >
             {link.name}
           </button>
@@ -89,7 +89,7 @@ export default function Navbar() {
 
         <button 
           onClick={() => scrollToSection("contact")}
-          className="inline-flex text-white border-2 py-2 px-6 focus:outline-none hover:bg-purple-800 rounded-full text-lg transition-colors duration-300"
+          className="inline-flex text-white border-2 py-2 px-6 focus:outline-none hover:bg-purple-800 rounded-full text-md transition-colors duration-300"
         >
           Contact
         </button>

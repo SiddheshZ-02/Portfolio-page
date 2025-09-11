@@ -32,7 +32,7 @@ const skillsData = [
     id: 4,
     image: typescript,
     title: "Typescript",
-    progress: 80,
+    progress: 60,
   },
   {
     id: 5,
@@ -94,15 +94,15 @@ const Skills = () => {
       <div
         data-aos="fade-up"
         data-aos-delay="300"
-        className="relative z-20 text-center space-y-6 sm:space-y-10"
+        className=" text-center space-y-6 sm:space-y-10"
       >
         <header>
           <h1 className="text-3xl sm:text-4xl font-bold">
             My <span className="text-green-500">Skills</span>
           </h1>
           <p className="text-gray-400 mt-2 sm:mt-4 text-sm sm:text-base">
-            I have a strong foundation in front-end development and a passion
-            for building clean, responsive, and user-focused web interfaces
+            I have a strong foundation in front-end development with a passion
+            for creating clean, responsive, and user-focused web interfaces
             using modern web technologies. <br />
             My current skills set includes:
           </p>
