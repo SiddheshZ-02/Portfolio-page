@@ -60,7 +60,7 @@ const Contact = () => {
     setErrors({ ...errors, [name]: "" });
   };
 
-  const handleSubmit = async (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
     if (!validateForm()) {
       return;
@@ -136,7 +136,7 @@ const Contact = () => {
               Contact Us
             </h2>
           </header>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={onSubmit} className="space-y-4">
             <div>
               <label
                 htmlFor="name"
