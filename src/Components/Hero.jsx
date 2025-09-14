@@ -53,52 +53,75 @@ const Hero = () => {
             >
               <TextType
                 text={["Front-End Developer", "App Developer"]}
-                typingSpeed={75}
-                pauseDuration={1500}
+                typingSpeed={60}
+                pauseDuration={2000}
                 showCursor={true}
                 cursorCharacter="|"
-                textColors={["#c744ec"]}
+                textColors={["#8b5cf6", "#06b6d4"]}
+                variableSpeed={{ min: 50, max: 100 }}
               />
             </h2>
           </header>
           <p className="text-base sm:text-lg md:text-lg lg:text-xl text-gray-200 mb-4 sm:mb-6">
             I’m a dedicated Front-End Developer passionate about building clean,
             responsive interfaces and high-quality apps for web and mobile.
-           
           </p>
-          <div className="flex justify-center md:justify-start items-center space-x-4 mb-6">
+
+          <div className="flex justify-center md:justify-start items-center space-x-6 mb-8 relative z-10">
             <a
               href="https://www.linkedin.com/in/siddhesh-zujam/"
               target="_blank"
               rel="noopener noreferrer"
+              className="group relative"
             >
+              <div className="absolute inset-0 bg-blue-500 rounded-full blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
               <img
                 src={linkedin}
                 alt="LinkedIn"
-                className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-14 md:h-14 relative z-10 
+                  transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12"
               />
             </a>
             <a
               href="https://github.com/SiddheshZ-02"
               target="_blank"
               rel="noopener noreferrer"
+              className="group relative"
             >
+              <div className="absolute inset-0 bg-gray-600 rounded-full blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
               <img
                 src={github}
                 alt="GitHub"
-                className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-14 md:h-14 relative z-10 
+                  transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12"
               />
             </a>
           </div>
-          <a href="Resume.pdf" download="Resume.pdf">
-            <button
-              className="inline-flex text-white border-2 py-2 px-4 sm:px-6 
-              focus:outline-none hover:bg-[#801b9c] hover:shadow-[0_0_30px_rgba(128,0,128,0.7)] 
-              rounded-full text-sm sm:text-base"
-            >
-              Download CV
-            </button>
-          </a>
+
+          <div className="relative z-10">
+            <a href="Resume.pdf" download="Resume.pdf">
+              <button
+                className="group relative inline-flex items-center px-8 py-4 text-sm font-semibold
+                  bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full text-white
+                  backdrop-blur-sm border border-white/20 shadow-xl
+                  hover:shadow-2xl hover:shadow-purple-500/25 
+                  transition-all duration-300 hover:scale-105
+                  focus:outline-none focus:ring-4 focus:ring-purple-500/50"
+              >
+                <span className="relative z-10">Download CV</span>
+                <div
+                  className="absolute inset-0 bg-gradient-to-r from-purple-700 to-cyan-600 rounded-full 
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+
+                {/* Button glow effect */}
+                <div
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 
+                    blur-md opacity-0 group-hover:opacity-75 transition-opacity duration-300 -z-10"
+                />
+              </button>
+            </a>
+          </div>
         </section>
       </main>
     </div>

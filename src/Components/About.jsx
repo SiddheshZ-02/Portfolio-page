@@ -13,21 +13,25 @@ const About = () => {
       data-aos-delay="500"
       className="flex justify-center md:justify-end relative w-full"
     >
-      <div
-        className="h-[150px] w-[200px] sm:h-[200px] sm:w-[300px] md:h-[250px] md:w-[350px] lg:h-[300px] lg:w-[400px] 
-          bg-gradient-to-l from-[#6d2897] via-[#6c95f5] to-[#bb61c5] absolute transform rotate-12 z-0 
-          top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-          md:top-1/2 md:left-auto md:right-0 md:-translate-x-0 md:-translate-y-1/2 
-          lg:right-2 rounded-full"
-      ></div>
-      <img
-        src={prof2}
-        alt="about picture 2"
-        className="relative z-10 
-          w-[120px] h-[140px] sm:w-[160px] sm:h-[180px] md:w-[200px] md:h-[240px] lg:w-[240px] lg:h-[300px] 
-          rounded-lg shadow-lg 
-          left-0 md:left-auto md:right-25 lg:right-25 mt-10"
-      />
+     <div className="relative p-8 rounded-3xl backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl  mt-5">
+              {/* Floating decorative elements */}
+              <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full opacity-80 animate-bounce mt-5" />
+              <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60 animate-pulse  " />
+              
+              {/* Enhanced gradient background */}
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-purple-600/30 via-blue-500/20 to-cyan-400/30 
+                rounded-3xl transform rotate-3 scale-105 -z-10  "
+              />
+              
+              <img
+                src={prof2}
+                alt="Siddhesh Zujam - About Profile"
+                className="relative z-10 w-[180px] h-[250px] sm:w-[320px] sm:h-[400px] md:w-[260px] md:h-[350px] 
+                object-cover rounded-2xl shadow-2xl hover:scale-105 transition-all duration-500
+                hover:shadow-purple-500/25"
+              />
+            </div>
     </figure>
         <article
           data-aos="fade-right"
