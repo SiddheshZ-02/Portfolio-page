@@ -6,8 +6,8 @@ export default function Navbar() {
   const NavbarLinks = [
     { id: 1, name: "Home", link: "hero" },
     { id: 2, name: "About", link: "about" },
-    { id: 3, name: "Skills", link: "skills" },
-    { id: 4, name: "My Projects", link: "projects" },
+    { id: 3, name: "My Projects", link: "projects" },
+    { id: 4, name: "Skills", link: "skills" },
   ];
 
   const scrollToSection = (sectionId) => {

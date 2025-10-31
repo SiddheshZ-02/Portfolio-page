@@ -17,8 +17,8 @@ function App() {
       <main className="bg-gray-950">
         <Hero />
         <About />
-        <Skills />
         <Projects />
+        <Skills />
         <Contact />
       </main>
     </>
