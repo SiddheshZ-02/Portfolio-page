@@ -13,14 +13,27 @@ export default function Navbar() {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80; // Adjust this value based on your navbar height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      // Using Lenis scroll instead of native scroll
+      const lenis = window.lenis;
+      if (lenis) {
+        const offset = 80; // Adjust this value based on your navbar height
+        lenis.scrollTo(element, {
+          offset: -offset,
+          immediate: false,
+          lock: true,
+          force: true
+        });
+      } else {
+        // Fallback to native smooth scrolling if Lenis is not available
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
     }
     setIsOpen(false);
   };
