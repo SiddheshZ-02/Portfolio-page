@@ -99,7 +99,7 @@ const Hero = () => {
           </div>
 
           <div className="relative z-10">
-            <a href="Siddhesh_FrontEnd-Developer.pdf" download="Siddhesh_FrontEnd-Developer.pdf">
+            <a href="_Siddhesh_FrontEnd-Dev.pdf.pdf" download="_Siddhesh_FrontEnd-Dev.pdf.pdf">
               <button
                 className="group relative inline-flex items-center px-8 py-4 text-sm font-semibold
                   bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full text-white
