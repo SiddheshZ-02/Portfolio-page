@@ -4,7 +4,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const NavbarLinks = [
-    { id: 1, name: "Home", link: "hero" },
+    { id: 1, name: "Home", link: "home" },
     { id: 2, name: "About", link: "about" },
     { id: 3, name: "My Projects", link: "projects" },
     { id: 4, name: "Skills", link: "skills" },

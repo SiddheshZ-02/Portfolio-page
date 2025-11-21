@@ -1,5 +1,5 @@
 import React from "react";
-import prof2 from "/prof2.png";
+const prof2 = import.meta.env.BASE_URL + 'prof2.png';
 
 const About = () => {
   return (

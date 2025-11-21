@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 import Footer from "./Footer";
-import Prof2  from "/prof2.png";
+const Prof2  = import.meta.env.BASE_URL + 'prof2.png';
 
 
 

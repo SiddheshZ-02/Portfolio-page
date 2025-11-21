@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
-import prof2 from "/prof2.png";
-import github from "/github.png";
-import linkedin from "/linkedin.png";
+const prof2 = import.meta.env.BASE_URL + 'prof2.png';
+const github = import.meta.env.BASE_URL + 'github.png';
+const linkedin = import.meta.env.BASE_URL + 'linkedin.png';
 import TextType from "./TextType";
 
 const Hero = () => {
@@ -10,7 +10,7 @@ const Hero = () => {
     <div className="relative overflow-hidden min-h-[500px] sm:min-h-[600px] lg:min-h-[700px] flex flex-col items-center">
       <Navbar />
       <main
-        id="hero"
+        id="home"
         className="flex flex-col sm:flex-col md:flex-row items-center justify-center 
           w-full px-4 sm:px-6 md:px-12 lg:px-24 pb-12 sm:pb-16 md:pb-20 lg:pb-24 
           pt-16 sm:pt-20 md:pt-24 lg:pt-32 mt-12 sm:mt-14 md:mt-0 z-10"

@@ -1,11 +1,11 @@
-import Tesla_clone from "/Tesla_clone.png";
-import notepadimg from "/notepadimg.png";
-import EMSimg from "/EMSimg.png";
-import weatherimg from "/weatherimg.png";
-import Zengym from "/Zengym.jpg";
-import Zengymqr from "/Zengymqr.png";
-import HRMS from "/HRMS.jpg";
-import HRMSqr from "/HRMSqr.png";
+const Tesla_clone = import.meta.env.BASE_URL + 'Tesla_clone.png';
+const notepadimg = import.meta.env.BASE_URL + 'notepadimg.png';
+const EMSimg = import.meta.env.BASE_URL + 'EMSimg.png';
+const weatherimg = import.meta.env.BASE_URL + 'weatherimg.png';
+const Zengym = import.meta.env.BASE_URL + 'Zengym.jpg';
+const Zengymqr = import.meta.env.BASE_URL + 'Zengymqr.png';
+const HRMS = import.meta.env.BASE_URL + 'HRMS.jpg';
+const HRMSqr = import.meta.env.BASE_URL + 'HRMSqr.png';
 import { useState } from "react";
 import QRCode from "react-qr-code";
 

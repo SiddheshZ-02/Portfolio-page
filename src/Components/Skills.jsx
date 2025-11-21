@@ -2,14 +2,14 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import html from "/html.png";
-import css from "/css.png";
-import javascript from "/javascript.png";
-import bootstrap from "/bootstrap.png";
-import react from "/react.png";
-import tailwind from "/tailwind.png";
-import native1 from "/native1.jpg";
-import typescript from "/typescript.png";
+const html = import.meta.env.BASE_URL + 'html.png';
+const css = import.meta.env.BASE_URL + 'css.png';
+const javascript = import.meta.env.BASE_URL + 'javascript.png';
+const bootstrap = import.meta.env.BASE_URL + 'bootstrap.png';
+const reactImg = import.meta.env.BASE_URL + 'react.png';
+const tailwind = import.meta.env.BASE_URL + 'tailwind.png';
+const native1 = import.meta.env.BASE_URL + 'native1.jpg';
+const typescript = import.meta.env.BASE_URL + 'typescript.png';
 
 const skillsData = [
   {
@@ -42,7 +42,7 @@ const skillsData = [
   },
   {
     id: 5,
-    image: react,
+    image: reactImg,
     title: "REACT JS / REACT NATIVE",
     progress: 75,
     color: "from-cyan-500 to-blue-500"
