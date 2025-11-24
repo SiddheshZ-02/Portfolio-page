@@ -36,14 +36,14 @@ export default function Navbar() {
       }
     }
     // Update the URL hash so navigation is visible in the address bar
-    try {
-      const newHash = `${sectionId}`;
-      // Use pushState so navigation creates history entries
-      window.history.pushState(null, "", newHash);
-    } catch (e) {
-      // Fallback to setting location.hash
-      window.location.hash = sectionId;
-    }
+    // try {
+    //   const newHash = `${sectionId}`;
+    //   // Use pushState so navigation creates history entries
+    //   window.history.pushState(null, "", newHash);
+    // } catch (e) {
+    //   // Fallback to setting location.hash
+    //   window.location.hash = sectionId;
+    // }
 
     setIsOpen(false);
   };

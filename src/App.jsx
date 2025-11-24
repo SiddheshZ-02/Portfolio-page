@@ -37,35 +37,35 @@ function App() {
     requestAnimationFrame(raf);
 
     // Scroll to section if URL contains a hash on initial load
-    const scrollToHash = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        const id = hash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-          const offset = 80; // match Navbar offset
-          if (lenis) {
-            lenis.scrollTo(element, { offset: -offset, immediate: false, lock: true, force: true });
-          } else {
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
-            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-          }
-        }
-      }
-    };
+    // const scrollToHash = () => {
+    //   const hash = window.location.hash;
+    //   if (hash) {
+    //     const id = hash.replace('#', '');
+    //     const element = document.getElementById(id);
+    //     if (element) {
+    //       const offset = 80; // match Navbar offset
+    //       if (lenis) {
+    //         lenis.scrollTo(element, { offset: -offset, immediate: false, lock: true, force: true });
+    //       } else {
+    //         const elementPosition = element.getBoundingClientRect().top;
+    //         const offsetPosition = elementPosition + window.pageYOffset - offset;
+    //         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    //       }
+    //     }
+    //   }
+    // };
 
-    // handle hashchange events (back/forward navigation)
-    window.addEventListener('hashchange', scrollToHash);
+    // // handle hashchange events (back/forward navigation)
+    // window.addEventListener('hashchange', scrollToHash);
 
-    // call once on mount
-    scrollToHash();
+    // // call once on mount
+    // scrollToHash();
 
     // Cleanup function
     return () => {
       window.lenis = null;
       lenis.destroy();
-      window.removeEventListener('hashchange', scrollToHash);
+      // window.removeEventListener('hashchange', scrollToHash);
     };
   }, []);
 
