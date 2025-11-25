@@ -84,19 +84,19 @@ const Projects = () => {
       id: 1,
       image: EMSimg,
       title: "Employee-Management-System",
-      link: "https://siddheshz-02.github.io/Employee-Management-System-EMS/",
+      link: "https://employees-management-systems.netlify.app/",
     },
     {
       id: 2,
       image: notepadimg,
       title: "Task & Notepad",
-      link: "https://siddheshz-02.github.io/Task-Notepad/",
+      link: "https://notes-track.netlify.app/",
     },
     {
       id: 3,
       image: Tesla_clone,
       title: "Cars WebPage",
-      link: "https://siddheshz-02.github.io/car_webApp/",
+      link: "https://car-webpages.netlify.app/",
     },
     {
       id: 4,
